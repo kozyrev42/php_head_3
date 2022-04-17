@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title> Сайт на PHP </title>
+	<style> @import "css-file.css"; </style>
+</head>
+<body>
+
+<br/>
+<div id='sis'> Введите Ваше имя, фамилию, адрес эектронной почты<br/>
+	 для внесения в лист рассылки: </div>
+<br/>
+
+<form method = "post" action="addemail.php">	<!-- для значение action="" - пишим путь-назначение для отправляемой формы, при событии `submit` -->
+											<!-- "report.php" - сценарий который будет запущен на сервере для обработки формы -->				
+																
+	<label for="firstname">Имя:</label>				        <!-- просто тэг с текстом -->
+	<input type="text" name="firstname" id="firstname" />	<!-- в Массив $_POST сохраниться значение input`a, в ячейку с ключем "youname" -->
+		<br/>												    <!-- name="youname" - будет являтся ключом для доступа к данных из Массиве $_POST -->
+		<br/>
+	<label for="lastname">Фамилия:</label>
+	<input type="text" name="lastname" id="lastname" />
+		<br/>
+		<br/>
+	<label for="email">Ваш @mail:</label>
+	<input type="text" name="email" id="email" />
+		<br/>
+		<br/>
+	<input id="submit" name="submit" type="submit"  value="Отправить"/>
+</form>
+
+
+<script type="text/babel">
+</script>
+</body>
+</html>
+
+
